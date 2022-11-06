@@ -1,0 +1,347 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(app/app.component.scss);
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #cacaca;
+  font-family: "Roboto";
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 90%;
+  max-width: 1370px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("assets/fonts/Roboto/roboto-v30-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("assets/fonts/Roboto/roboto-v30-latin_cyrillic-regular.woff")
+      format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("assets/fonts/Roboto/roboto-v30-latin_cyrillic-700.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("assets/fonts/Roboto/roboto-v30-latin_cyrillic-700.woff")
+      format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* bungee-regular - latin */
+@font-face {
+  font-family: "Bungee";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("assets/fonts/Bungee/bungee-v11-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("assets/fonts/Bungee/bungee-v11-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+//HEADER STYLES
+.first_header_line {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  column-gap: 20vw;
+  margin-bottom: 5px;
+}
+.values_wrap {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 35px;
+  text-align: center;
+  justify-content: center;
+}
+
+.usd div,
+.eur div,
+.currency_title {
+  padding: 8px;
+  border: 2px black solid;
+  border-radius: 25px;
+  margin-bottom: 7px;
+}
+.exh_rate_wrap {
+  .currency {
+    background-color: #99ff91;
+  }
+  display: flex;
+  align-items: center;
+  column-gap: 45px;
+  .currency_title h3 {
+    padding: 3px 1px;
+  }
+}
+.currency_title {
+  padding-right: 80px;
+  border-radius: 35px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  min-width: 300px;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  color: white;
+  background-color: black;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    top: 24px;
+    right: 23px;
+    border-top: 3px solid #99ff91;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    top: 17px;
+    right: 22px;
+    height: 15px;
+    border-top: 3px solid #99ff91;
+    border-left: 3px solid #99ff91;
+    transform: rotate(137deg);
+  }
+}
+.main_title {
+  display: flex;
+  column-gap: 60px;
+  align-content: center;
+  justify-content: center;
+  font-size: 12vw;
+
+  letter-spacing: 5px;
+  line-height: 180px;
+  .second_word {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #99ff91;
+      border-radius: 50%;
+      top: 112px;
+      left: -70px;
+    }
+  }
+  .first_word {
+    position: relative;
+    &::after {
+      content: "JUST";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      letter-spacing: normal;
+      transform: rotate(350deg);
+      font-size: 2.5rem;
+      top: -41px;
+
+      font-weight: 700;
+      left: -63px;
+    }
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 115px;
+      height: 68px;
+      transform: rotate(350deg);
+      background-color: #99ff91;
+      border-radius: 0;
+      top: 6px;
+      left: -61px;
+    }
+  }
+}
+
+.second_header_line .container {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+}
+
+@media screen and (max-width: 1270px) {
+  .currency_title {
+    font-size: 16px;
+    padding-right: 50px;
+    min-width: 320px;
+  }
+  .currency_title::after {
+    width: 30px;
+    top: 22px;
+    right: 15px;
+  }
+  .currency_title::before {
+    width: 12px;
+    top: 17px;
+    right: 14px;
+    height: 12px;
+  }
+  .main_title {
+    line-height: 120px;
+  }
+  .main_title .second_word::after {
+    width: 35px;
+    height: 35px;
+    top: 75px;
+    left: -62px;
+  }
+  .main_title .first_word::before {
+    width: 102px;
+    height: 61px;
+    top: -8px;
+  }
+  .main_title .first_word::after {
+    font-size: 1.9rem;
+    top: -35px;
+    left: -57px;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .exh_rate_wrap {
+    font-size: 16px;
+  }
+  .currency_title {
+    font-size: 13px;
+    min-width: 280px;
+  }
+  .currency_title::after {
+    top: 19px;
+  }
+  .currency_title::before {
+    top: 14px;
+  }
+  .main_title {
+    line-height: 90px;
+  }
+
+  .main_title .first_word::before {
+    width: 88px;
+    height: 48px;
+    top: -5px;
+  }
+  .main_title .first_word::after {
+    top: -26px;
+  }
+  .main_title .second_word::after {
+    top: 57px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .first_header_line {
+    column-gap: 3vw;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .exh_rate_wrap {
+    column-gap: 11px;
+  }
+  .values_wrap {
+    column-gap: 15px;
+  }
+  .main_title {
+    line-height: 56px;
+    column-gap: 18px;
+  }
+  .main_title .first_word::before {
+    width: 68px;
+    height: 39px;
+    top: -8px;
+    left: -44px;
+  }
+  .main_title .first_word::after {
+    font-size: 1.4rem;
+    top: -15px;
+    left: -40px;
+  }
+  .main_title .second_word::after {
+    width: 21px;
+    height: 21px;
+    top: 45px;
+    left: -28px;
+  }
+  .logo_wrap {
+    max-width: 250px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+  .first_header_line {
+    flex-wrap: wrap;
+  }
+  .exh_rate_wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .currency_title::before,
+  .currency_title::after {
+    display: none;
+  }
+  .currency_title {
+    padding-right: 10px;
+    padding-left: 35px;
+  }
+  .main_title .second_word::after {
+    width: 17px;
+    height: 17px;
+    top: 36px;
+    left: -24px;
+  }
+  .main_title .first_word::before {
+    width: 51px;
+    height: 29px;
+    top: -2px;
+    left: -31px;
+  }
+  .main_title .first_word::after {
+    font-size: 1rem;
+    top: -16px;
+    left: -27px;
+  }
+}

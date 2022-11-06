@@ -1,0 +1,50 @@
+<div class="container currencies_wrapper">
+  <div class="first_currency_box">
+    <select
+      name="currencies"
+      id="currency_first"
+      class="currency_first"
+      (change)="findExchangeRate($event, 1)"
+      [(ngModel)]="selectedOptionFirst"
+    >
+      <option selected value="EUR">EUR</option>
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+    </select>
+    <input
+      class="currency_first"
+      type="number"
+      (input)="findExchangeRate($event, 1)"
+      placeholder="ВВЕДІТЬ СУМУ"
+      [(ngModel)]="first_currency_value"
+    />
+    <div class="first_warning" [style.display]="firstWarning">
+      Введіть позитивне значення!
+    </div>
+  </div>
+  <div class="second_currency_box">
+    <select
+      name="currencies"
+      id="currency_second"
+      (change)="findExchangeRate($event, 2)"
+      [(ngModel)]="selectedOptionSecond"
+    >
+      <option value="EUR">EUR</option>
+      <option selected value="UAH">UAH</option>
+      <option value="USD">USD</option>
+    </select>
+    <input
+      type="number"
+      class="currency_second"
+      (input)="findExchangeRate($event, 2)"
+      [(ngModel)]="second_currency_value"
+      placeholder="ВВЕДІТЬ СУМУ"
+    />
+    <div class="second_warning" [style.display]="firstWarning">
+      Введіть позитивне значення!
+    </div>
+  </div>
+  <div class="img_wrap">
+    <img src="../../assets/images/man.png" alt="" />
+  </div>
+</div>

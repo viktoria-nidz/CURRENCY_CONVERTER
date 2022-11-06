@@ -1,0 +1,167 @@
+.container.currencies_wrapper {
+  display: flex;
+  padding-left: 15vw;
+  justify-content: center;
+  .first_currency_box {
+    margin-right: 4vw;
+  }
+  .first_currency_box,
+  .second_currency_box {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #99ff91 0%, #61d1f2 100%);
+    min-width: 310px;
+    width: 330px;
+    height: 210px;
+    padding: 40px;
+    border: 1px solid #333333;
+    border-radius: 36px;
+  }
+}
+.first_warning,
+.second_warning {
+  display: none;
+  font-size: 12px;
+  color: red;
+  font-weight: normal;
+}
+.second_currency_box,
+.first_currency_box {
+  select,
+  input,
+  select option {
+    background-color: black;
+    border: none;
+    color: #99ff91;
+    width: 100%;
+    padding: 8px;
+    padding-left: 30px;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    font-family: "Roboto";
+    border-radius: 36px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; /* Remove default arrow */
+    background-image: url(../../assets/images/down-chevron.png); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: 86% 47%;
+    background-size: 20px;
+  }
+  select {
+    margin-bottom: 12px;
+  }
+  select:focus,
+  input:focus {
+    border: 1px solid #99ff91;
+    outline-color: #99ff91;
+  }
+  input {
+    background-image: none;
+    padding-left: 15px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    appearance: textfield;
+  }
+  input::placeholder {
+    font-size: 14px;
+    color: #99ff91;
+  }
+}
+.img_wrap {
+  max-width: 36vw;
+  min-width: 500px;
+  z-index: -1;
+  position: relative;
+  top: -45px;
+  right: 171px;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .container.currencies_wrapper {
+    .first_currency_box,
+    .second_currency_box {
+      min-width: 30vw;
+      width: 30vw;
+      padding: 30px;
+    }
+  }
+}
+@media screen and (max-width: 1010px) {
+  .container.currencies_wrapper .first_currency_box,
+  .container.currencies_wrapper .second_currency_box {
+    margin-top: 56px;
+  }
+  .img_wrap {
+    min-width: 427px;
+
+    top: -71px;
+    right: 139px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .img_wrap {
+    min-width: 356px;
+    top: -39px;
+    right: 127px;
+  }
+  .container.currencies_wrapper .first_currency_box,
+  .container.currencies_wrapper .second_currency_box {
+    min-width: 27vw;
+    width: 30vw;
+    padding: 9px;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .container.currencies_wrapper .first_currency_box,
+  .container.currencies_wrapper .second_currency_box {
+    margin-top: 25px;
+    height: 171px;
+  }
+  .container.currencies_wrapper .first_currency_box {
+    margin-left: 20px;
+  }
+  .img_wrap {
+    min-width: 300px;
+    top: -39px;
+    right: 90px;
+  }
+}
+@media screen and (max-width: 518px) {
+  .img_wrap {
+    display: none;
+  }
+  .container.currencies_wrapper {
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    flex-wrap: wrap;
+  }
+  .container.currencies_wrapper .first_currency_box,
+  .container.currencies_wrapper .second_currency_box {
+    min-width: 220px;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  .container.currencies_wrapper .first_currency_box {
+    margin-left: 0;
+  }
+}
